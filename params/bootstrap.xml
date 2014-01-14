@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="params">
+        <fieldset
+                name="bootstrap">
+            <field
+                    name="extra_small_devices_grid"
+                    type="integer"
+                    first="0"
+                    last="12"
+                    step="1"
+                    label="COM_MODULES_FIELD_EXTRA_SMALL_DEVICES_GRID_LABEL"
+                    description="COM_MODULES_FIELD_EXTRA_SMALL_DEVICES_GRID_DESC"
+                    />
+            <field
+                    name="small_devices_grid"
+                    type="integer"
+                    first="0"
+                    last="12"
+                    step="1"
+                    label="COM_MODULES_FIELD_SMALL_DEVICES_GRID_LABEL"
+                    description="COM_MODULES_FIELD_SMALL_DEVICES_GRID_DESC"
+                    />
+            <field
+                    name="medium_devices_grid"
+                    type="integer"
+                    first="0"
+                    last="12"
+                    step="1"
+                    label="COM_MODULES_FIELD_MEDIUM_DEVICES_GRID_LABEL"
+                    description="COM_MODULES_FIELD_MEDIUM_DEVICES_GRID_DESC"
+                    />
+            <field
+                    name="large_devices_grid"
+                    type="integer"
+                    first="0"
+                    last="12"
+                    step="1"
+                    label="COM_MODULES_FIELD_LARGE_DEVICES_GRID_LABEL"
+                    description="COM_MODULES_FIELD_LARGE_DEVICES_GRID_DESC"
+                    />
+            <field  name="extra_small_devices_available"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_EXTRA_SMALL_DEVICES_AVAILBLE_LABEL"
+                    description="COM_MODULES_FIELD_EXTRA_SMALL_DEVICES_AVAILBLE_DESC"
+                    >
+                    <option value="1">Hidden</option>
+                    <option value="2">Visible</option>
+                    <option value="0">not set</option>
+                </field>
+            <field  name="small_devices_available"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_SMALL_DEVICES_AVAILBLE_LABEL"
+                    description="COM_MODULES_FIELD_SMALL_DEVICES_AVAILBLE_DESC"
+                    >
+                    <option value="1">Hidden</option>
+                    <option value="2">Visible</option>
+                    <option value="0">not set</option>
+                </field>
+            <field  name="medium_devices_available"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_MEDIUM_DEVICES_AVAILBLE_LABEL"
+                    description="COM_MODULES_FIELD_MEDIUM_DEVICES_AVAILBLE_DESC"
+                    >
+                    <option value="1">Hidden</option>
+                    <option value="2">Visible</option>
+                    <option value="0">not set</option>
+                </field>
+            <field  name="large_devices_available"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_LARGE_DEVICES_AVAILBLE_LABEL"
+                    description="COM_MODULES_FIELD_LARGE_DEVICES_AVAILBLE_DESC"
+                    >
+                    <option value="1">Hidden</option>
+                    <option value="2">Visible</option>
+                    <option value="0">not set</option>
+                </field>
+            <field  name="bootstrap_print"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_BOOTSTRAP_PRINT_LABEL"
+                    description="COM_MODULES_FIELD_BOOTSTRAP_PRINT_DESC"
+                    >
+                    <option value="1">Hidden</option>
+                    <option value="2">Visible</option>
+                    <option value="0">not set</option>
+            </field>
+        </fieldset>
+    </fields>
+</form>

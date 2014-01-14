@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+    <name>plg_system_nnbootstrapparams</name>
+    <author>Niels Nübel</author>
+    <creationDate>Januar 2014</creationDate>
+    <copyright>(C) 2005 - 2013 Open Source Matters. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see	LICENSE.txt</license>
+    <authorEmail>info@nn-medienagentur.de</authorEmail>
+    <authorUrl>www.nn-medienagentur.de</authorUrl>
+    <version>3.0.0</version>
+    <description>PLG_SYSTEM_NNBOOTSTRAPPARAMS_XML_DESCRIPTION</description>
+    <files>
+        <file plugin="nnbootstrapparams">nnbootstrapparams.php</file>
+        <filename>index.html</filename>
+        <folder>params</folder>
+        <folder>library</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">en-GB.plg_system_nnbootstrapparams.ini</language>
+        <language tag="en-GB">en-GB.plg_system_nnbootstrapparams.sys.ini</language>
+        <language tag="de-DE">de-DE.plg_system_nnbootstrapparams.ini</language>
+        <language tag="de-DE">de-DE.plg_system_nnbootstrapparams.sys.ini</language>
+    </languages>
+</extension>

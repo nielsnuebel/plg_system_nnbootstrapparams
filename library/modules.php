@@ -44,10 +44,11 @@ class JDocumentRendererModules extends JDocumentRenderer
         $modules = JModuleHelper::getModules($position);
         $count = count($modules);
         $counter = 0;
+        $style = (isset($params['style']))? $params['style'] : NULL;
         foreach ( $modules as $mod)
 		{
             //Plugin Change
-            $mod = $this->changeparams($mod,$count,$counter,$params['style']);
+            $mod = $this->changeparams($mod,$count,$counter,$style);
 
 			$moduleHtml = $renderer->render($mod, $params, $content);
 

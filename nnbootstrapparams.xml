@@ -21,4 +21,16 @@
         <language tag="de-DE">de-DE.plg_system_nnbootstrapparams.ini</language>
         <language tag="de-DE">de-DE.plg_system_nnbootstrapparams.sys.ini</language>
     </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="exludeposition" type="text"
+                       description="which modulposition exlude from change (top,left,sidebar)"
+                       label="Exlude Modulposition"
+                       default="position-1,position-2"
+                        >
+                </field>
+            </fieldset>
+        </fields>
+    </config>
 </extension>

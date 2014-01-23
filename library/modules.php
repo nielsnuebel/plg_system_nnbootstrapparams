@@ -45,12 +45,18 @@ class JDocumentRendererModules extends JDocumentRenderer
         $count = count($modules);
         $counter = 0;
         $style = (isset($params['style']))? $params['style'] : NULL;
-        foreach ( $modules as $mod)
-		{
-            //Plugin Change
-            $mod = $this->changeparams($mod,$count,$counter,$style);
+        
+        $plugin = JPluginHelper::getPlugin('system', 'nnbootstrapparams');
+        $pluginparams = json_decode($plugin->params);
+        $exludeposition = $pluginparams->exludeposition;
+        if($exludeposition != '')$exludeposition = explode(',',$exludeposition);
 
-			$moduleHtml = $renderer->render($mod, $params, $content);
+        foreach ( $modules as $mod)
+	{
+            if(!in_array($position,$exludeposition)) {
+                $mod = $this->changeparams($mod,$count,$counter,$style);
+            }
+	    $moduleHtml = $renderer->render($mod, $params, $content);
 
 			if ($app->isSite() && $canEdit && trim($moduleHtml) != '' && $user->authorise('core.edit', 'com_modules.module.' . $mod->id))
 			{

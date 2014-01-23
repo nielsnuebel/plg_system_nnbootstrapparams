@@ -27,7 +27,7 @@ class plgSystemNNBootstrapparams extends JPlugin
     }
 
     public function onContentPrepareForm($form, $data) {
-        if ($form->getName() == 'com_modules.module') {
+        if ($form->getName() == 'com_modules.module' or $form->getName() == 'com_advancedmodules.module') {
             JForm::addFormPath(__DIR__ . '/params');
             $form->loadFile('bootstrap', false);
         }

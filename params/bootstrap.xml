@@ -39,6 +39,42 @@
                     label="COM_MODULES_FIELD_LARGE_DEVICES_GRID_LABEL"
                     description="COM_MODULES_FIELD_LARGE_DEVICES_GRID_DESC"
                     />
+            <field
+                    name="extra_small_devices_offset"
+                    type="integer"
+                    first="0"
+                    last="12"
+                    step="1"
+                    label="COM_MODULES_FIELD_EXTRA_SMALL_DEVICES_OFFSET_LABEL"
+                    description="COM_MODULES_FIELD_EXTRA_SMALL_DEVICES_OFFSET_DESC"
+                    />
+            <field
+                    name="small_devices_offset"
+                    type="integer"
+                    first="0"
+                    last="12"
+                    step="1"
+                    label="COM_MODULES_FIELD_SMALL_DEVICES_OFFSET_LABEL"
+                    description="COM_MODULES_FIELD_SMALL_DEVICES_OFFSET_DESC"
+                    />
+            <field
+                    name="medium_devices_offset"
+                    type="integer"
+                    first="0"
+                    last="12"
+                    step="1"
+                    label="COM_MODULES_FIELD_MEDIUM_DEVICES_OFFSET_LABEL"
+                    description="COM_MODULES_FIELD_MEDIUM_DEVICES_OFFSET_DESC"
+                    />
+            <field
+                    name="large_devices_offset"
+                    type="integer"
+                    first="0"
+                    last="12"
+                    step="1"
+                    label="COM_MODULES_FIELD_LARGE_DEVICES_OFFSET_LABEL"
+                    description="COM_MODULES_FIELD_LARGE_DEVICES_OFFSET_DESC"
+                    />
             <field  name="extra_small_devices_available"
                     type="radio"
                     class="btn-group"

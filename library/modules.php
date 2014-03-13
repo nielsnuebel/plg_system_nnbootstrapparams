@@ -119,7 +119,20 @@ class JDocumentRendererModules extends JDocumentRenderer
             if($params->get('large_devices_grid'))
                 $moduleclass_sfx .=' col-lg-'.$params->get('large_devices_grid');
 
-            //visible and hidden
+			//Bootstrap Offset
+			if($params->get('extra_small_devices_offset'))
+				$moduleclass_sfx .=' col-xs-offset-'.$params->get('extra_small_devices_offset');
+
+			if($params->get('small_devices_offset'))
+				$moduleclass_sfx .=' col-sm-offset-'.$params->get('small_devices_offset');
+
+			if($params->get('medium_devices_offset'))
+				$moduleclass_sfx .=' col-md-offset-'.$params->get('medium_devices_offset');
+
+			if($params->get('large_devices_offset'))
+				$moduleclass_sfx .=' col-lg-offset-'.$params->get('large_devices_offset');
+
+			//visible and hidden
             if($params->get('extra_small_devices_available') == 1)
                 $moduleclass_sfx .=' hidden-xs';
 

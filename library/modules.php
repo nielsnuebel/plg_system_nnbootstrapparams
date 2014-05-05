@@ -45,18 +45,18 @@ class JDocumentRendererModules extends JDocumentRenderer
         $count = count($modules);
         $counter = 0;
         $style = (isset($params['style']))? $params['style'] : NULL;
-        
+
         $plugin = JPluginHelper::getPlugin('system', 'nnbootstrapparams');
         $pluginparams = json_decode($plugin->params);
         $exludeposition = $pluginparams->exludeposition;
         if($exludeposition != '')$exludeposition = explode(',',$exludeposition);
 
         foreach ( $modules as $mod)
-	{
+		{
             if(!in_array($position,$exludeposition)) {
                 $mod = $this->changeparams($mod,$count,$counter,$style);
             }
-	    $moduleHtml = $renderer->render($mod, $params, $content);
+			$moduleHtml = $renderer->render($mod, $params, $content);
 
 			if ($app->isSite() && $canEdit && trim($moduleHtml) != '' && $user->authorise('core.edit', 'com_modules.module.' . $mod->id))
 			{
@@ -96,7 +96,7 @@ class JDocumentRendererModules extends JDocumentRenderer
         //Check Module Style Parameter is not set jdoc style is default
         if($paramsChromeStyle) $style = $paramsChromeStyle;
 
-        if($style!='table' and $style!='horz' and $style!='none' and $style!='outline'){
+        if($style!='table' and $style!='horz' and $style!='none' and $style!='outline' and  $style!='System-none'){
 
             //Standard col-xs-12 when nothing is set
             if(!$params->get('extra_small_devices_grid') and !$params->get('small_devices_grid') and !$params->get('medium_devices_grid') and !$params->get('large_devices_grid')){
@@ -132,7 +132,7 @@ class JDocumentRendererModules extends JDocumentRenderer
 			if($params->get('large_devices_offset'))
 				$moduleclass_sfx .=' col-lg-offset-'.$params->get('large_devices_offset');
 
-			//visible and hidden
+            //visible and hidden
             if($params->get('extra_small_devices_available') == 1)
                 $moduleclass_sfx .=' hidden-xs';
 
@@ -163,7 +163,27 @@ class JDocumentRendererModules extends JDocumentRenderer
 
             if($params->get('bootstrap_print') == 2)
                 $moduleclass_sfx .=' visible-print';
-        }
+
+			$styleattr = NULL;
+
+			//Margin
+			if($params->get('margin_top'))
+				$styleattr .=' margin-top: '.$params->get('margin_top').'px;';
+
+			if($params->get('margin_right'))
+				$styleattr .=' margin-right: '.$params->get('margin_right').'px;';
+
+			if($params->get('margin_bottom'))
+				$styleattr .=' margin-bottom: '.$params->get('margin_bottom').'px;';
+
+			if($params->get('margin_left'))
+				$styleattr .=' margin-left: '.$params->get('margin_left').'px;';
+
+			if(!is_null($styleattr)) {
+				if($style == 'html5') $params->set('style','html5kickstart');
+				$params->set('styleattr',$styleattr);
+			}
+		}
 
         $params->set('moduleclass_sfx',$moduleclass_sfx);
 

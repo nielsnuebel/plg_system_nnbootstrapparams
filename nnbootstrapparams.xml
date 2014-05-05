@@ -27,7 +27,7 @@
                 <field name="exludeposition" type="text"
                        description="which modulposition exlude from change (top,left,sidebar)"
                        label="Exlude Modulposition"
-                       default="position-1,position-2"
+                       default="sidebar-a,sidebar-b,sidebar"
                         >
                 </field>
             </fieldset>

@@ -2,12 +2,12 @@
 <extension version="3.1" type="plugin" group="system" method="upgrade">
     <name>plg_system_nnbootstrapparams</name>
     <author>Niels Nübel</author>
-    <creationDate>Januar 2014</creationDate>
+    <creationDate>11 June 2014</creationDate>
     <copyright>(C) 2005 - 2013 Open Source Matters. All rights reserved.</copyright>
     <license>GNU General Public License version 2 or later; see	LICENSE.txt</license>
     <authorEmail>info@nn-medienagentur.de</authorEmail>
     <authorUrl>www.nn-medienagentur.de</authorUrl>
-    <version>3.0.0</version>
+    <version>3.0.1</version>
     <description>PLG_SYSTEM_NNBOOTSTRAPPARAMS_XML_DESCRIPTION</description>
     <files>
         <file plugin="nnbootstrapparams">nnbootstrapparams.php</file>
@@ -25,8 +25,8 @@
         <fields name="params">
             <fieldset name="basic">
                 <field name="exludeposition" type="text"
-                       description="which modulposition exlude from change (top,left,sidebar)"
-                       label="Exlude Modulposition"
+                       description="Which module position's to exlude from your changes (top,left,sidebar)"
+                       label="Exlude Module Position's"
                        default="sidebar-a,sidebar-b,sidebar"
                         >
                 </field>

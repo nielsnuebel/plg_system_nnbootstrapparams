@@ -30,6 +30,8 @@ class plgSystemNNBootstrapparams extends JPlugin
         if ($form->getName() == 'com_modules.module' or $form->getName() == 'com_advancedmodules.module') {
             JForm::addFormPath(__DIR__ . '/params');
             $form->loadFile('bootstrap', false);
+			if ($this->params->get('add_margin'))
+            $form->loadFile('margin', false);
         }
     }
 

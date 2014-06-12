@@ -130,33 +130,17 @@
                     <option value="2">Visible</option>
                     <option value="0">not set</option>
             </field>
-        </fieldset>
-        <fieldset
-                name="margin">
-            <field
-                    name="margin_top"
-                    type="text"
-                    label="COM_MODULES_FIELD_MARGIN_TOP_LABEL"
-                    description="COM_MODULES_FIELD_MARGIN_TOP_LABEL_DESC"
-                    />
-            <field
-                    name="margin_right"
-                    type="text"
-                    label="COM_MODULES_FIELD_MARGIN_RIGHT_LABEL"
-                    description="COM_MODULES_FIELD_MARGIN_RIGHT_LABEL_DESC"
-                    />
-            <field
-                    name="margin_bottom"
-                    type="text"
-                    label="COM_MODULES_FIELD_MARGIN_BOTTOM_LABEL"
-                    description="COM_MODULES_FIELD_MARGIN_BOTTOM_LABEL_DESC"
-                    />
-            <field
-                    name="margin_left"
-                    type="text"
-                    label="COM_MODULES_FIELD_MARGIN_LEFT_LABEL"
-                    description="COM_MODULES_FIELD_MARGIN_LEFT_LABEL_DESC"
-                    />
+            <field  name="add_default_col"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_ADD_DEFAULT_COL_LABEL"
+                    description="COM_MODULES_FIELD_ADD_DEFAULT_COL_DESC"
+                    >
+                <option value="1">Hidden</option>
+                <option value="2">Visible</option>
+                <option value="0">not set</option>
+            </field>
         </fieldset>
     </fields>
 </form>

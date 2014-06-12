@@ -54,7 +54,7 @@ class JDocumentRendererModules extends JDocumentRenderer
         foreach ( $modules as $mod)
 		{
             if(!in_array($position,$exludeposition)) {
-                $mod = $this->changeparams($mod,$count,$counter,$style);
+                $mod = $this->changeparams($mod,$count,$counter,$style,$pluginparams);
             }
 			$moduleHtml = $renderer->render($mod, $params, $content);
 
@@ -70,7 +70,7 @@ class JDocumentRendererModules extends JDocumentRenderer
 		return $buffer;
 	}
 
-    public function changeparams($module,$count,$counter,$style = null) {
+    public function changeparams($module,$count,$counter,$style = null,$pluginparams) {
 
         $params = new JRegistry;
         $params->loadString($module->params);
@@ -100,10 +100,13 @@ class JDocumentRendererModules extends JDocumentRenderer
 
             //Standard col-xs-12 when nothing is set
             if(!$params->get('extra_small_devices_grid') and !$params->get('small_devices_grid') and !$params->get('medium_devices_grid') and !$params->get('large_devices_grid')){
-                if($params->get('bootstrap_size'))
-                    $moduleclass_sfx .=' col-xs-'.$params->get('bootstrap_size');
-                else
-                   $moduleclass_sfx .=' col-xs-12';
+                if($pluginparams->add_default_col_global or $params->get('add_default_col'))
+				{
+					if($params->get('bootstrap_size'))
+						$moduleclass_sfx .=' col-xs-'.$params->get('bootstrap_size');
+					else
+						$moduleclass_sfx .=' col-xs-12';
+				}
             }
 
             //Bootstrap Grid
@@ -164,24 +167,27 @@ class JDocumentRendererModules extends JDocumentRenderer
             if($params->get('bootstrap_print') == 2)
                 $moduleclass_sfx .=' visible-print';
 
-			$styleattr = NULL;
 
-			//Margin
-			if($params->get('margin_top'))
-				$styleattr .=' margin-top: '.$params->get('margin_top').'px;';
+			if($pluginparams->add_margin){
+				$styleattr = NULL;
 
-			if($params->get('margin_right'))
-				$styleattr .=' margin-right: '.$params->get('margin_right').'px;';
+				//Margin
+				if($params->get('margin_top'))
+					$styleattr .=' margin-top: '.$params->get('margin_top').'px;';
 
-			if($params->get('margin_bottom'))
-				$styleattr .=' margin-bottom: '.$params->get('margin_bottom').'px;';
+				if($params->get('margin_right'))
+					$styleattr .=' margin-right: '.$params->get('margin_right').'px;';
 
-			if($params->get('margin_left'))
-				$styleattr .=' margin-left: '.$params->get('margin_left').'px;';
+				if($params->get('margin_bottom'))
+					$styleattr .=' margin-bottom: '.$params->get('margin_bottom').'px;';
 
-			if(!is_null($styleattr)) {
-				if($style == 'html5') $params->set('style','html5kickstart');
-				$params->set('styleattr',$styleattr);
+				if($params->get('margin_left'))
+					$styleattr .=' margin-left: '.$params->get('margin_left').'px;';
+
+				if(!is_null($styleattr)) {
+					if($style == 'html5') $params->set('style','html5kickstart');
+					$params->set('styleattr',$styleattr);
+				}
 			}
 		}
 

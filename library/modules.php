@@ -100,12 +100,15 @@ class JDocumentRendererModules extends JDocumentRenderer
 
             //Standard col-xs-12 when nothing is set
             if(!$params->get('extra_small_devices_grid') and !$params->get('small_devices_grid') and !$params->get('medium_devices_grid') and !$params->get('large_devices_grid')){
-                if($pluginparams->add_default_col_global or $params->get('add_default_col'))
+                if($params->get('add_default_col')!=2)
 				{
-					if($params->get('bootstrap_size'))
-						$moduleclass_sfx .=' col-xs-'.$params->get('bootstrap_size');
-					else
-						$moduleclass_sfx .=' col-xs-12';
+					if($pluginparams->add_default_col_global or $params->get('add_default_col'))
+					{
+						if($params->get('bootstrap_size'))
+							$moduleclass_sfx .=' col-xs-'.$params->get('bootstrap_size');
+						else
+							$moduleclass_sfx .=' col-xs-12';
+					}
 				}
             }
 

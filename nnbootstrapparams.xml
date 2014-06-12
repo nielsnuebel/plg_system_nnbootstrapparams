@@ -44,8 +44,8 @@
                         type="radio"
                         class="btn-group"
                         default="0"
-                        label="PLG_SYSTEM_NNBOOTSTRAPPARAMS_ADD_DEFAULT_COL_GLOBAL_LABEL"
-                        description="PLG_SYSTEM_NNBOOTSTRAPPARAMS_ADD_DEFAULT_COL_GLOBAL_DESC"
+                        label="PLG_SYSTEM_NNBOOTSTRAPPARAMS_ADD_MARGIN_LABEL"
+                        description="PLG_SYSTEM_NNBOOTSTRAPPARAMS_ADD_MARGIN_DESC"
                         >
                     <option value="1">add</option>
                     <option value="0">not set</option>

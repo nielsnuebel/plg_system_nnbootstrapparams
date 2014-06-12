@@ -137,8 +137,8 @@
                     label="COM_MODULES_FIELD_ADD_DEFAULT_COL_LABEL"
                     description="COM_MODULES_FIELD_ADD_DEFAULT_COL_DESC"
                     >
-                <option value="1">Hidden</option>
-                <option value="2">Visible</option>
+                <option value="1">add</option>
+                <option value="2">disable</option>
                 <option value="0">not set</option>
             </field>
         </fieldset>

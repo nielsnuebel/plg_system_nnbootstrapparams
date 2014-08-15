@@ -9,6 +9,8 @@
 
 defined('_JEXEC') or die;
 
+require_once JPATH_PLUGINS . "/system/nnbootstrapparams/library/styles.php";
+
 /**
  * Class plgSystemNNBootstrapparams
  *
@@ -45,6 +47,12 @@ class plgSystemNNBootstrapparams extends JPlugin
         if( version_compare( $version->getShortVersion(), "3", 'lt' ) ) {
             return false;
         }
+
+		JLoader::register(
+			'JFormFieldChromeStyle',
+			JPATH_PLUGINS . "/system/nnbootstrapparams/library/chromestyle.php",
+			true
+		);
 
         if ($app->isSite()) {
             // Make the auto loader aware of our modified NNBootstrapparams class

@@ -9,6 +9,8 @@
 
 defined('_JEXEC') or die;
 
+require_once JPATH_PLUGINS . "/system/nnbootstrapparams/library/styles.php";
+
 /**
  * Class plgSystemNNBootstrapparams
  *
@@ -21,38 +23,51 @@ defined('_JEXEC') or die;
  */
 class plgSystemNNBootstrapparams extends JPlugin
 {
-    public function __construct(& $subject, $config) {
-        parent::__construct($subject, $config);
-        $this->loadLanguage();
-    }
+	public function __construct(& $subject, $config) {
+		parent::__construct($subject, $config);
+		$this->loadLanguage();
+	}
 
-    public function onContentPrepareForm($form, $data) {
-        if ($form->getName() == 'com_modules.module' or $form->getName() == 'com_advancedmodules.module') {
-            JForm::addFormPath(__DIR__ . '/params');
-            $form->loadFile('bootstrap', false);
-			if ($this->params->get('add_margin'))
-            $form->loadFile('margin', false);
-        }
-    }
+	public function onContentPrepareForm($form, $data) {
+		if ($form->getName() == 'com_modules.module' or $form->getName() == 'com_advancedmodules.module') {
+			JForm::addFormPath(__DIR__ . '/params');
+			if ($this->params->get('add_bootstrap',1))
+				$form->loadFile('bootstrap', false);
+			if ($this->params->get('add_margin',1))
+				$form->loadFile('margin', false);
+			if ($this->params->get('add_padding',1))
+				$form->loadFile('padding', false);
+			if ($this->params->get('add_background',1))
+				$form->loadFile('background', false);
+			if ($this->params->get('add_onepage',1))
+				$form->loadFile('onepage', false);
+		}
+	}
 
-    function onAfterInitialise() {
-        $app = JFactory::getApplication();
+	function onAfterInitialise() {
+		$app = JFactory::getApplication();
 
-        // version check
-        $version = new JVersion();
+		// version check
+		$version = new JVersion();
 
-        // abort if the current Joomla release is older
-        if( version_compare( $version->getShortVersion(), "3", 'lt' ) ) {
-            return false;
-        }
+		// abort if the current Joomla release is older
+		if( version_compare( $version->getShortVersion(), "3", 'lt' ) ) {
+			return false;
+		}
 
-        if ($app->isSite()) {
-            // Make the auto loader aware of our modified NNBootstrapparams class
-            JLoader::register(
-                'JDocumentRendererModules',
-                JPATH_PLUGINS . "/system/nnbootstrapparams/library/modules.php",
-                true
-            );
-        }
-    }
+		JLoader::register(
+			'JFormFieldChromeStyle',
+			JPATH_PLUGINS . "/system/nnbootstrapparams/library/chromestyle.php",
+			true
+		);
+
+		if ($app->isSite()) {
+			// Make the auto loader aware of our modified NNBootstrapparams class
+			JLoader::register(
+				'JDocumentRendererModules',
+				JPATH_PLUGINS . "/system/nnbootstrapparams/library/jdocument_renderer_modules.php",
+				true
+			);
+		}
+	}
 }

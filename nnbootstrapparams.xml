@@ -30,22 +30,53 @@
                        default="sidebar-a,sidebar-b,sidebar"
                         >
                 </field>
-                <field  name="add_default_col_global"
+                <field  name="add_bootstrap"
                         type="radio"
                         class="btn-group"
-                        default="0"
-                        label="PLG_SYSTEM_NNBOOTSTRAPPARAMS_ADD_DEFAULT_COL_GLOBAL_LABEL"
-                        description="PLG_SYSTEM_NNBOOTSTRAPPARAMS_ADD_DEFAULT_COL_GLOBAL_DESC"
+                        default="1"
+                        label="PLG_SYSTEM_NNBOOTSTRAPPARAMS_ADD_BOOTSTRAP_LABEL"
+                        description="PLG_SYSTEM_NNBOOTSTRAPPARAMS_ADD_BOOTSTRAP_DESC"
                         >
                     <option value="1">add</option>
                     <option value="0">not set</option>
                 </field>
+
                 <field  name="add_margin"
                         type="radio"
                         class="btn-group"
-                        default="0"
+                        default="1"
                         label="PLG_SYSTEM_NNBOOTSTRAPPARAMS_ADD_MARGIN_LABEL"
                         description="PLG_SYSTEM_NNBOOTSTRAPPARAMS_ADD_MARGIN_DESC"
+                        >
+                    <option value="1">add</option>
+                    <option value="0">not set</option>
+                </field>
+                <field  name="add_padding"
+                        type="radio"
+                        class="btn-group"
+                        default="1"
+                        label="PLG_SYSTEM_NNBOOTSTRAPPARAMS_ADD_PADDING_LABEL"
+                        description="PLG_SYSTEM_NNBOOTSTRAPPARAMS_ADD_PADDING_DESC"
+                        >
+                    <option value="1">add</option>
+                    <option value="0">not set</option>
+                </field>
+                <field  name="add_background"
+                        type="radio"
+                        class="btn-group"
+                        default="1"
+                        label="PLG_SYSTEM_NNBOOTSTRAPPARAMS_ADD_BACKGROUND_LABEL"
+                        description="PLG_SYSTEM_NNBOOTSTRAPPARAMS_ADD_BACKGROUND_DESC"
+                        >
+                    <option value="1">add</option>
+                    <option value="0">not set</option>
+                </field>
+                <field  name="add_onepage"
+                        type="radio"
+                        class="btn-group"
+                        default="1"
+                        label="PLG_SYSTEM_NNBOOTSTRAPPARAMS_ADD_ONEPAGE_LABEL"
+                        description="PLG_SYSTEM_NNBOOTSTRAPPARAMS_ADD_ONEPAGE_DESC"
                         >
                     <option value="1">add</option>
                     <option value="0">not set</option>

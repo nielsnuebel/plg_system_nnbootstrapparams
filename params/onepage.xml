@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="params">
+        <fieldset
+                name="onepage">
+            <field
+                    name="onepage_id"
+                    type="text"
+                    label="COM_MODULES_FIELD_ONEPAGE_ID_LABEL"
+                    description="COM_MODULES_FIELD_ONEPAGE_ID_LABEL_DESC"
+                    />
+            <field
+                    name="onepage_class"
+                    type="text"
+                    label="COM_MODULES_FIELD_ONEPAGE_CLASS_LABEL"
+                    description="COM_MODULES_FIELD_ONEPAGE_CLASS_LABEL_DESC"
+                    />
+
+            <field  name="onepage_container"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_ONEPAGE_CONTAINER_LABEL"
+                    description="COM_MODULES_FIELD_ONEPAGE_CONTAINER_LABEL_DESC"
+                    >
+                <option value="1">set</option>
+                <option value="0">not set</option>
+            </field>
+            <field  name="onepage_row"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_ONEPAGE_ROW_LABEL"
+                    description="COM_MODULES_FIELD_ONEPAGE_ROW_LABEL_DESC"
+                    >
+                <option value="1">set</option>
+                <option value="0">not set</option>
+            </field>
+            <field  name="onepage_noclass"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_ONEPAGE_NOCLASS_LABEL"
+                    description="COM_MODULES_FIELD_ONEPAGE_NOCLASS_LABEL_DESC"
+                    >
+                <option value="1">set</option>
+                <option value="0">not set</option>
+            </field>
+            <field  name="onepage_fullimage"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_ONEPAGE_FULLIMAGE_LABEL"
+                    description="COM_MODULES_FIELD_ONEPAGE_FULLIMAGE_LABEL_DESC"
+                    >
+                <option value="1">set</option>
+                <option value="0">not set</option>
+            </field>
+        </fieldset>
+    </fields>
+</form>

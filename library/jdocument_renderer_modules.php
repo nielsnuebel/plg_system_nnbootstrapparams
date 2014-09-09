@@ -41,21 +41,22 @@ class JDocumentRendererModules extends JDocumentRenderer
 		$canEdit = $user->id && $frontediting && !($app->isAdmin() && $frontediting < 2) && $user->authorise('core.edit', 'com_modules');
 		$menusEditing = ($frontediting == 2) && $user->authorise('core.edit', 'com_menus');
 
-        $modules = JModuleHelper::getModules($position);
-        $count = count($modules);
-        $counter = 0;
-        $style = (isset($params['style']))? $params['style'] : NULL;
+        $modules = JModuleHelper::getModules($position); //add for plugin
+        $count = count($modules); //add for plugin
+        $counter = 0; //add for plugin
+        $style = (isset($params['style']))? $params['style'] : NULL; //add for plugin
 
-        $plugin = JPluginHelper::getPlugin('system', 'nnbootstrapparams');
-        $pluginparams = json_decode($plugin->params);
-        $exludeposition = $pluginparams->exludeposition;
-        if($exludeposition != '')$exludeposition = explode(',',$exludeposition);
+        $plugin = JPluginHelper::getPlugin('system', 'nnbootstrapparams'); //add for plugin
+        $pluginparams = json_decode($plugin->params); //add for plugin
+        $exludeposition = $pluginparams->exludeposition; //add for plugin
+        if($exludeposition != '')$exludeposition = explode(',',$exludeposition); //add for plugin
 
         foreach ( $modules as $mod)
 		{
             if(!in_array($position,$exludeposition)) {
-                $mod = $this->changeparams($mod,$count,$counter,$style,$pluginparams);
+                $mod = $this->changeparams($mod,$count,$counter,$style); //add for plugin
             }
+
 			$moduleHtml = $renderer->render($mod, $params, $content);
 
 			if ($app->isSite() && $canEdit && trim($moduleHtml) != '' && $user->authorise('core.edit', 'com_modules.module.' . $mod->id))
@@ -65,17 +66,19 @@ class JDocumentRendererModules extends JDocumentRenderer
 			}
 
 			$buffer .= $moduleHtml;
-            $counter++;
+            $counter++; //add for plugin
 		}
 		return $buffer;
 	}
 
-    public function changeparams($module,$count,$counter,$style = null,$pluginparams) {
+
+
+    public function changeparams($module,$count,$counter,$style = null) {
 
         $params = new JRegistry;
         $params->loadString($module->params);
 
-        $moduleclass_sfx = $params->get('moduleclass_sfx');
+        $moduleclass_sfx = ' '.$params->get('moduleclass_sfx');
 
         //Check the first and last Module on Position
         switch($counter) {
@@ -100,16 +103,10 @@ class JDocumentRendererModules extends JDocumentRenderer
 
             //Standard col-xs-12 when nothing is set
             if(!$params->get('extra_small_devices_grid') and !$params->get('small_devices_grid') and !$params->get('medium_devices_grid') and !$params->get('large_devices_grid')){
-                if($params->get('add_default_col')!=2)
-				{
-					if($pluginparams->add_default_col_global or $params->get('add_default_col'))
-					{
-						if($params->get('bootstrap_size'))
-							$moduleclass_sfx .=' col-xs-'.$params->get('bootstrap_size');
-						else
-							$moduleclass_sfx .=' col-xs-12';
-					}
-				}
+                if($params->get('bootstrap_size'))
+                    $moduleclass_sfx .=' col-xs-'.$params->get('bootstrap_size');
+                else
+                   $moduleclass_sfx .=' col-xs-12';
             }
 
             //Bootstrap Grid
@@ -170,28 +167,44 @@ class JDocumentRendererModules extends JDocumentRenderer
             if($params->get('bootstrap_print') == 2)
                 $moduleclass_sfx .=' visible-print';
 
+			$styleattr = NULL;
 
-			if($pluginparams->add_margin){
-				$styleattr = NULL;
+			//Margin
+			if($params->get('margin_top'))
+				$styleattr .=' margin-top: '.$params->get('margin_top').'px;';
 
-				//Margin
-				if($params->get('margin_top'))
-					$styleattr .=' margin-top: '.$params->get('margin_top').'px;';
+			if($params->get('margin_right'))
+				$styleattr .=' margin-right: '.$params->get('margin_right').'px;';
 
-				if($params->get('margin_right'))
-					$styleattr .=' margin-right: '.$params->get('margin_right').'px;';
+			if($params->get('margin_bottom'))
+				$styleattr .=' margin-bottom: '.$params->get('margin_bottom').'px;';
 
-				if($params->get('margin_bottom'))
-					$styleattr .=' margin-bottom: '.$params->get('margin_bottom').'px;';
+			if($params->get('margin_left'))
+				$styleattr .=' margin-left: '.$params->get('margin_left').'px;';
 
-				if($params->get('margin_left'))
-					$styleattr .=' margin-left: '.$params->get('margin_left').'px;';
+			//Padding
+			if($params->get('padding_top'))
+				$styleattr .=' padding-top: '.$params->get('padding_top').'px;';
 
-				if(!is_null($styleattr)) {
-					if($style == 'html5') $params->set('style','html5kickstart');
-					$params->set('styleattr',$styleattr);
-				}
+			if($params->get('padding_right'))
+				$styleattr .=' padding-right: '.$params->get('padding_right').'px;';
+
+			if($params->get('padding_bottom'))
+				$styleattr .=' padding-bottom: '.$params->get('padding_bottom').'px;';
+
+			if($params->get('padding_left'))
+				$styleattr .=' padding-left: '.$params->get('padding_left').'px;';
+
+			//Background
+			if($params->get('background'))
+				$styleattr .=' background: '.$params->get('background').';';
+
+			if(!is_null($styleattr) or $params->get('clearfix',0) ) {
+				if($style == 'html5') $params->set('style','html5kickstart');
+				$params->set('styleattr',$styleattr);
+				$params->set('clearfix',$params->get('clearfix'));
 			}
+
 		}
 
         $params->set('moduleclass_sfx',$moduleclass_sfx);

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="params">
+        <fieldset
+                name="background">
+            <field
+                    name="background"
+                    type="text"
+                    label="COM_MODULES_FIELD_BACKGROUND_LABEL"
+                    description="COM_MODULES_FIELD_MARGIN_TOP_LABEL_DESC"
+                    />
+        </fieldset>
+    </fields>
+</form>

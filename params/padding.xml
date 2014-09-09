@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="params">
+        <fieldset
+                name="padding">
+            <field
+                    name="padding_top"
+                    type="text"
+                    label="COM_MODULES_FIELD_PADDING_TOP_LABEL"
+                    description="COM_MODULES_FIELD_PADDING_TOP_LABEL_DESC"
+                    />
+            <field
+                    name="padding_right"
+                    type="text"
+                    label="COM_MODULES_FIELD_PADDING_RIGHT_LABEL"
+                    description="COM_MODULES_FIELD_PADDING_RIGHT_LABEL_DESC"
+                    />
+            <field
+                    name="padding_bottom"
+                    type="text"
+                    label="COM_MODULES_FIELD_PADDING_BOTTOM_LABEL"
+                    description="COM_MODULES_FIELD_PADDING_BOTTOM_LABEL_DESC"
+                    />
+            <field
+                    name="padding_left"
+                    type="text"
+                    label="COM_MODULES_FIELD_PADDING_LEFT_LABEL"
+                    description="COM_MODULES_FIELD_PADDING_LEFT_LABEL_DESC"
+                    />
+        </fieldset>
+    </fields>
+</form>

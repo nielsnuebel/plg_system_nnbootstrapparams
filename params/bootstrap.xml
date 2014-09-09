@@ -130,17 +130,16 @@
                     <option value="2">Visible</option>
                     <option value="0">not set</option>
             </field>
-            <field  name="add_default_col"
+            <field  name="clearfix"
                     type="radio"
                     class="btn-group"
                     default="0"
-                    label="COM_MODULES_FIELD_ADD_DEFAULT_COL_LABEL"
-                    description="COM_MODULES_FIELD_ADD_DEFAULT_COL_DESC"
+                    label="COM_MODULES_FIELD_CLEARFIX_LABEL"
+                    description="COM_MODULES_FIELD_CLEARFIX_DESC"
                     >
-                <option value="1">add</option>
-                <option value="2">disable</option>
-                <option value="0">not set</option>
-            </field>
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+             </field>
         </fieldset>
     </fields>
 </form>

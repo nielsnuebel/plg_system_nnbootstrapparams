@@ -13,6 +13,26 @@
                 <option value="1">add</option>
                 <option value="0">not set</option>
             </field>
+            <field  name="last_p_nomargin"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_MILCH_LAST_P_NOMARGIN_LABEL"
+                    description="COM_MODULES_FIELD_MILCH_LAST_P_NOMARGIN_DESC"
+                    >
+                <option value="1">add</option>
+                <option value="0">not set</option>
+            </field>
+            <field  name="every_p_nomargin"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_MILCH_EVERY_P_NOMARGIN_LABEL"
+                    description="COM_MODULES_FIELD_MILCH_EVERY_P_NOMARGIN_DESC"
+                    >
+                <option value="1">add</option>
+                <option value="0">not set</option>
+            </field>
         </fieldset>
     </fields>
 </form>

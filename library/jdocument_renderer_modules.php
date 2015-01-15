@@ -171,6 +171,12 @@ class JDocumentRendererModules extends JDocumentRenderer
             if($params->get('fullwidth_image'))
                 $moduleclass_sfx .=' fullwidth-image';
 
+            if($params->get('last_p_nomargin'))
+                $moduleclass_sfx .=' last-p-nomargin';
+
+            if($params->get('every_p_nomargin'))
+                $moduleclass_sfx .=' every-p-nomargin';
+
 			$styleattr = NULL;
 
 			//Margin

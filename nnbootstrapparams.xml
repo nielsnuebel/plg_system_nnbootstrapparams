@@ -14,13 +14,8 @@
         <filename>index.html</filename>
         <folder>params</folder>
         <folder>library</folder>
+        <folder>language</folder>
     </files>
-    <languages>
-        <language tag="en-GB">en-GB.plg_system_nnbootstrapparams.ini</language>
-        <language tag="en-GB">en-GB.plg_system_nnbootstrapparams.sys.ini</language>
-        <language tag="de-DE">de-DE.plg_system_nnbootstrapparams.ini</language>
-        <language tag="de-DE">de-DE.plg_system_nnbootstrapparams.sys.ini</language>
-    </languages>
     <config>
         <fields name="params">
             <fieldset name="basic">
@@ -77,6 +72,16 @@
                         default="1"
                         label="PLG_SYSTEM_NNBOOTSTRAPPARAMS_ADD_ONEPAGE_LABEL"
                         description="PLG_SYSTEM_NNBOOTSTRAPPARAMS_ADD_ONEPAGE_DESC"
+                        >
+                    <option value="1">add</option>
+                    <option value="0">not set</option>
+                </field>
+                <field  name="add_milch"
+                        type="radio"
+                        class="btn-group"
+                        default="1"
+                        label="PLG_SYSTEM_NNBOOTSTRAPPARAMS_ADD_MILCH_LABEL"
+                        description="PLG_SYSTEM_NNBOOTSTRAPPARAMS_ADD_MILCH_DESC"
                         >
                     <option value="1">add</option>
                     <option value="0">not set</option>

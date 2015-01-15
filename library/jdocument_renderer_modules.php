@@ -167,6 +167,10 @@ class JDocumentRendererModules extends JDocumentRenderer
             if($params->get('bootstrap_print') == 2)
                 $moduleclass_sfx .=' visible-print';
 
+            //Milch
+            if($params->get('fullwidth_image'))
+                $moduleclass_sfx .=' fullwidth-image';
+
 			$styleattr = NULL;
 
 			//Margin

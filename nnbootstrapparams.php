@@ -41,6 +41,8 @@ class plgSystemNNBootstrapparams extends JPlugin
 				$form->loadFile('background', false);
 			if ($this->params->get('add_onepage',1))
 				$form->loadFile('onepage', false);
+			if ($this->params->get('add_milch',1))
+				$form->loadFile('milch', false);
 		}
 	}
 

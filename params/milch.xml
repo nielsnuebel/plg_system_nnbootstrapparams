@@ -33,6 +33,170 @@
                 <option value="1">add</option>
                 <option value="0">not set</option>
             </field>
+
+            <field  name="nomargin_left"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_MILCH_NOMARGIN_LEFT_LABEL"
+                    description="COM_MODULES_FIELD_MILCH_NOMARGIN_LEFT_DESC"
+                    >
+                <option value="1">add</option>
+                <option value="0">not set</option>
+            </field>
+            <field  name="sm_nomargin_left"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_MILCH_SM_NOMARGIN_LEFT_LABEL"
+                    description="COM_MODULES_FIELD_MILCH_SM_NOMARGIN_LEFT_DESC"
+                    >
+                <option value="1">add</option>
+                <option value="0">not set</option>
+            </field>
+            <field  name="md_nomargin_left"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_MILCH_MD_NOMARGIN_LEFT_LABEL"
+                    description="COM_MODULES_FIELD_MILCH_MD_NOMARGIN_LEFT_DESC"
+                    >
+                <option value="1">add</option>
+                <option value="0">not set</option>
+            </field>
+            <field  name="lg_nomargin_left"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_MILCH_LG_NOMARGIN_LEFT_LABEL"
+                    description="COM_MODULES_FIELD_MILCH_LG_NOMARGIN_LEFT_DESC"
+                    >
+                <option value="1">add</option>
+                <option value="0">not set</option>
+            </field>
+            
+            <field  name="nomargin_right"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_MILCH_NOMARGIN_RIGHT_LABEL"
+                    description="COM_MODULES_FIELD_MILCH_NOMARGIN_RIGHT_DESC"
+                    >
+                <option value="1">add</option>
+                <option value="0">not set</option>
+            </field>
+            <field  name="sm_nomargin_right"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_MILCH_SM_NOMARGIN_RIGHT_LABEL"
+                    description="COM_MODULES_FIELD_MILCH_SM_NOMARGIN_RIGHT_DESC"
+                    >
+                <option value="1">add</option>
+                <option value="0">not set</option>
+            </field>
+            <field  name="md_nomargin_right"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_MILCH_MD_NOMARGIN_RIGHT_LABEL"
+                    description="COM_MODULES_FIELD_MILCH_MD_NOMARGIN_RIGHT_DESC"
+                    >
+                <option value="1">add</option>
+                <option value="0">not set</option>
+            </field>
+            <field  name="lg_nomargin_right"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_MILCH_LG_NOMARGIN_RIGHT_LABEL"
+                    description="COM_MODULES_FIELD_MILCH_LG_NOMARGIN_RIGHT_DESC"
+                    >
+                <option value="1">add</option>
+                <option value="0">not set</option>
+            </field>
+
+            <field  name="nopadding_left"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_MILCH_NOPADDING_LEFT_LABEL"
+                    description="COM_MODULES_FIELD_MILCH_NOPADDING_LEFT_DESC"
+                    >
+                <option value="1">add</option>
+                <option value="0">not set</option>
+            </field>
+            <field  name="sm_nopadding_left"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_MILCH_SM_NOPADDING_LEFT_LABEL"
+                    description="COM_MODULES_FIELD_MILCH_SM_NOPADDING_LEFT_DESC"
+                    >
+                <option value="1">add</option>
+                <option value="0">not set</option>
+            </field>
+            <field  name="md_nopadding_left"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_MILCH_MD_NOPADDING_LEFT_LABEL"
+                    description="COM_MODULES_FIELD_MILCH_MD_NOPADDING_LEFT_DESC"
+                    >
+                <option value="1">add</option>
+                <option value="0">not set</option>
+            </field>
+            <field  name="lg_nopadding_left"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_MILCH_LG_NOPADDING_LEFT_LABEL"
+                    description="COM_MODULES_FIELD_MILCH_LG_NOPADDING_LEFT_DESC"
+                    >
+                <option value="1">add</option>
+                <option value="0">not set</option>
+            </field>
+
+            <field  name="nopadding_right"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_MILCH_NOPADDING_RIGHT_LABEL"
+                    description="COM_MODULES_FIELD_MILCH_NOPADDING_RIGHT_DESC"
+                    >
+                <option value="1">add</option>
+                <option value="0">not set</option>
+            </field>
+            <field  name="sm_nopadding_right"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_MILCH_SM_NOPADDING_RIGHT_LABEL"
+                    description="COM_MODULES_FIELD_MILCH_SM_NOPADDING_RIGHT_DESC"
+                    >
+                <option value="1">add</option>
+                <option value="0">not set</option>
+            </field>
+            <field  name="md_nopadding_right"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_MILCH_MD_NOPADDING_RIGHT_LABEL"
+                    description="COM_MODULES_FIELD_MILCH_MD_NOPADDING_RIGHT_DESC"
+                    >
+                <option value="1">add</option>
+                <option value="0">not set</option>
+            </field>
+            <field  name="lg_nopadding_right"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_MILCH_LG_NOPADDING_RIGHT_LABEL"
+                    description="COM_MODULES_FIELD_MILCH_LG_NOPADDING_RIGHT_DESC"
+                    >
+                <option value="1">add</option>
+                <option value="0">not set</option>
+            </field>
         </fieldset>
     </fields>
 </form>

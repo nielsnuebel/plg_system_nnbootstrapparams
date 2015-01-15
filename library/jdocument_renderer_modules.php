@@ -177,6 +177,54 @@ class JDocumentRendererModules extends JDocumentRenderer
             if($params->get('every_p_nomargin'))
                 $moduleclass_sfx .=' every-p-nomargin';
 
+            if($params->get('nomargin_left'))
+                $moduleclass_sfx .=' nomargin-left';
+
+            if($params->get('sm_nomargin_left'))
+                $moduleclass_sfx .=' sm-nomargin-left';
+
+            if($params->get('md_nomargin_left'))
+                $moduleclass_sfx .=' md-nomargin-left';
+
+            if($params->get('lg_nomargin_left'))
+                $moduleclass_sfx .=' lg-nomargin-left';
+
+            if($params->get('nomargin_right'))
+                $moduleclass_sfx .=' nomargin-right';
+
+            if($params->get('sm_nomargin_right'))
+                $moduleclass_sfx .=' sm-nomargin-right';
+
+            if($params->get('md_nomargin_right'))
+                $moduleclass_sfx .=' md-nomargin-right';
+
+            if($params->get('lg_nomargin_right'))
+                $moduleclass_sfx .=' lg-nomargin-right';
+
+            if($params->get('nopadding_left'))
+                $moduleclass_sfx .=' nopadding-left';
+
+            if($params->get('sm_nopadding_left'))
+                $moduleclass_sfx .=' sm-nopadding-left';
+
+            if($params->get('md_nopadding_left'))
+                $moduleclass_sfx .=' md-nopadding-left';
+
+            if($params->get('lg_nopadding_left'))
+                $moduleclass_sfx .=' lg-nopadding-left';
+
+            if($params->get('nopadding_right'))
+                $moduleclass_sfx .=' nopadding-right';
+
+            if($params->get('sm_nopadding_right'))
+                $moduleclass_sfx .=' sm-nopadding-right';
+
+            if($params->get('md_nopadding_right'))
+                $moduleclass_sfx .=' md-nopadding-right';
+
+            if($params->get('lg_nopadding_right'))
+                $moduleclass_sfx .=' lg-nopadding-right';
+
 			$styleattr = NULL;
 
 			//Margin

@@ -48,7 +48,7 @@
                     type="radio"
                     class="btn-group"
                     default="0"
-                    label="COM_MODULES_FIELD_MILCH_MG_PULL_RIGHT_LABEL"
+                    label="COM_MODULES_FIELD_MILCH_MD_PULL_RIGHT_LABEL"
                     description="COM_MODULES_FIELD_MILCH_MD_PULL_RIGHT_DESC"
                     >
                 <option value="1">add</option>

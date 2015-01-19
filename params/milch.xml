@@ -34,6 +34,37 @@
                 <option value="0">not set</option>
             </field>
 
+            <field  name="sm_pull_right"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_MILCH_SM_PULL_RIGHT_LABEL"
+                    description="COM_MODULES_FIELD_MILCH_SM_PULL_RIGHT_DESC"
+                    >
+                <option value="1">add</option>
+                <option value="0">not set</option>
+            </field>
+            <field  name="md_pull_right"
+                    type="radio"
+                    class="btn-group"
+                    default="0"
+                    label="COM_MODULES_FIELD_MILCH_MG_PULL_RIGHT_LABEL"
+                    description="COM_MODULES_FIELD_MILCH_MD_PULL_RIGHT_DESC"
+                    >
+                <option value="1">add</option>
+                <option value="0">not set</option>
+            </field>
+            <field  name="lg_pull_right"
+                            type="radio"
+                            class="btn-group"
+                            default="0"
+                            label="COM_MODULES_FIELD_MILCH_LG_PULL_RIGHT_LABEL"
+                            description="COM_MODULES_FIELD_MILCH_LG_PULL_RIGHT_DESC"
+                >
+            <option value="1">add</option>
+            <option value="0">not set</option>
+            </field>
+
             <field  name="nomargin_left"
                     type="radio"
                     class="btn-group"

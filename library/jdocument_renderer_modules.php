@@ -225,6 +225,15 @@ class JDocumentRendererModules extends JDocumentRenderer
             if($params->get('lg_nopadding_right'))
                 $moduleclass_sfx .=' lg-nopadding-right';
 
+            if($params->get('sm_pull_right'))
+                $moduleclass_sfx .=' sm-pull-right';
+
+            if($params->get('md_pull_right'))
+                $moduleclass_sfx .=' md-pull-right';
+
+            if($params->get('lg_pull_right'))
+                $moduleclass_sfx .=' lg-pull-right';
+
 			$styleattr = NULL;
 
 			//Margin

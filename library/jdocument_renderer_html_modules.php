@@ -40,7 +40,7 @@ class JDocumentRendererHtmlModules extends JDocumentRenderer
 		$modules = JModuleHelper::getModules($position); //add for plugin
 		$count = count($modules); //add for plugin
 		$counter = 0; //add for plugin
-		cd nn   $style = (isset($params['style']))? $params['style'] : NULL; //add for plugin
+		$style = (isset($params['style']))? $params['style'] : NULL; //add for plugin
 
 		$plugin = JPluginHelper::getPlugin('system', 'nnbootstrapparams'); //add for plugin
 		$pluginparams = json_decode($plugin->params); //add for plugin

@@ -48,10 +48,7 @@ class plgSystemNNBootstrapparams extends JPlugin
 		$app = JFactory::getApplication();
 
 		// version check
-		$version = new JVersion();
-
-		// abort if the current Joomla release is older
-		if( version_compare( $version->getShortVersion(), "3", 'lt' ) ) {
+		if (version_compare(JVERSION, '3', 'lt')) {
 			return false;
 		}
 
@@ -63,16 +60,21 @@ class plgSystemNNBootstrapparams extends JPlugin
 
 		if ($app->isSite()) {
 			// Make the auto loader aware of our modified NNBootstrapparams class
-			JLoader::register(
-				'JDocumentRendererModules',
-				JPATH_PLUGINS . "/system/nnbootstrapparams/library/jdocument_renderer_modules.php",
-				true
-			);
-			JLoader::register(
-				'JDocumentRendererHtmlModules',
-				JPATH_PLUGINS . "/system/nnbootstrapparams/library/jdocument_renderer_html_modules.php",
-				true
-			);
+			if (!version_compare(JVERSION, '3.5', 'lt'))
+			{
+				JLoader::register(
+					'JDocumentRendererHtmlModules',
+					JPATH_PLUGINS . "/system/nnbootstrapparams/library/jdocument_renderer_html_modules.php",
+					true
+				);
+			}
+			else {
+				JLoader::register(
+					'JDocumentRendererModules',
+					JPATH_PLUGINS . "/system/nnbootstrapparams/library/jdocument_renderer_modules.php",
+					true
+				);
+			}
 		}
 	}
 }

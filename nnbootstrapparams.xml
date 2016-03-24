@@ -7,20 +7,15 @@
     <license>GNU General Public License version 2 or later; see	LICENSE.txt</license>
     <authorEmail>info@nn-medienagentur.de</authorEmail>
     <authorUrl>www.nn-medienagentur.de</authorUrl>
-    <version>3.0.1</version>
+    <version>3.5.0</version>
     <description>PLG_SYSTEM_NNBOOTSTRAPPARAMS_XML_DESCRIPTION</description>
     <files>
         <file plugin="nnbootstrapparams">nnbootstrapparams.php</file>
         <filename>index.html</filename>
         <folder>params</folder>
-        <folder>library</folder>
+        <folder>library</folder>dd
+        <folder>language</folder>
     </files>
-    <languages>
-        <language tag="en-GB">en-GB.plg_system_nnbootstrapparams.ini</language>
-        <language tag="en-GB">en-GB.plg_system_nnbootstrapparams.sys.ini</language>
-        <language tag="de-DE">de-DE.plg_system_nnbootstrapparams.ini</language>
-        <language tag="de-DE">de-DE.plg_system_nnbootstrapparams.sys.ini</language>
-    </languages>
     <config>
         <fields name="params">
             <fieldset name="basic">

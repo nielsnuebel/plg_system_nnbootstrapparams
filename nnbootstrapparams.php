@@ -68,6 +68,11 @@ class plgSystemNNBootstrapparams extends JPlugin
 				JPATH_PLUGINS . "/system/nnbootstrapparams/library/jdocument_renderer_modules.php",
 				true
 			);
+			JLoader::register(
+				'JDocumentRendererHtmlModules',
+				JPATH_PLUGINS . "/system/nnbootstrapparams/library/jdocument_renderer_html_modules.php",
+				true
+			);
 		}
 	}
 }

@@ -7,7 +7,7 @@
     <license>GNU General Public License version 2 or later; see	LICENSE.txt</license>
     <authorEmail>info@nn-medienagentur.de</authorEmail>
     <authorUrl>www.nn-medienagentur.de</authorUrl>
-    <version>3.5.0</version>
+    <version>3.7.0</version>
     <description>PLG_SYSTEM_NNBOOTSTRAPPARAMS_XML_DESCRIPTION</description>
     <files>
         <file plugin="nnbootstrapparams">nnbootstrapparams.php</file>

@@ -205,7 +205,16 @@ class JDocumentRendererHtmlModules extends JDocumentRenderer
 		$params->set('moduleclass_sfx',$moduleclass_sfx);
 
 		//set new Parameter
-		$module->params = $params;
+		// version check
+		if (version_compare(JVERSION, '3.7', 'lt'))
+		{
+			$module->params = $params;
+		}
+		else
+		{
+			$module->params = $params->toString();
+		}
+
 		return $module;
 	}
 }
